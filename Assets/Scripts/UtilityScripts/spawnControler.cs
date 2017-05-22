@@ -11,6 +11,7 @@ public class spawnControler : MonoBehaviour
     public float maxY = 2.0f; // value
     public float minY = -2.0f;
     public float spawnChance = 1f; //percent chance per second to spawn
+	int counter = 0;
 
     // Use this for initialization
     void Start()
@@ -21,12 +22,15 @@ public class spawnControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		counter++;
         float random = Random.Range(0f, 100.0f);
-        if (random < (spawnChance) * Time.deltaTime)
-        {
-            Vector3 position = new Vector3(transform.position.x, Random.Range(minY, maxY), 0);
-            Instantiate(objectToSpawn, position, Quaternion.identity);
-        }
+		if (counter % spawnChance == 0) {
+			//if (random < (spawnChance) * Time.deltaTime) {
+				//Vector3 position = new Vector3 (transform.position.x, Random.Range (minY, maxY), 18);
+				Vector3 position = new Vector3 (-200, Random.Range (minY, maxY), 18);
+				Instantiate (objectToSpawn, position, Quaternion.identity);
+			//}
+		}
     }
 
 }

@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1BC7FB52-8EA7-35D5-E145-2264F78BD025}</ProjectGuid>
+    <ProjectGuid>{D322B904-823E-B8A0-7EC6-5668D1C44371}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Float.cs" />
-     <Compile Include="Assets\Scripts\GarbageFloat.cs" />
+     <Compile Include="Assets\Scripts\GarbageFloatDraggable.cs" />
+     <Compile Include="Assets\Scripts\GarbageFloatPoof.cs" />
      <Compile Include="Assets\Scripts\Swim.cs" />
+     <Compile Include="Assets\Scripts\UtilityScripts\spawnControler.cs" />
      <Compile Include="Assets\Scripts\WaveController.cs" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\nnj3de_crucarp\README.txt" />
@@ -76,7 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{005D2745-FF8A-8D23-418A-DC58A9E0EE36}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{7FAA95F9-641B-F83C-ED1A-24356E9F1831}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
