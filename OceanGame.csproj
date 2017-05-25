@@ -76,6 +76,9 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -91,7 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Float.cs" />
-    <Compile Include="Assets\Scripts\GarbageFloat.cs" />
+    <Compile Include="Assets\Scripts\GarbageFloatDraggable.cs" />
+    <Compile Include="Assets\Scripts\GarbageFloatPoof.cs" />
+    <Compile Include="Assets\Scripts\PointCounter.cs" />
     <Compile Include="Assets\Scripts\Swim.cs" />
     <Compile Include="Assets\Scripts\UtilityScripts\spawnControler.cs" />
     <Compile Include="Assets\Scripts\WaveController.cs" />

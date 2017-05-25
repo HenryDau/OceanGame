@@ -20,7 +20,14 @@ public class GarbageFloatPoof : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		Destroy (gameObject);
+        Destroy(gameObject);
+
+        //Finds Points and refernces public variable
+        GameObject PointCounter = GameObject.Find("Points");
+        PointCounter Points = PointCounter.GetComponent<PointCounter>();
+        Points.point += 1;
+
+       
 	}
 		
 	// Update is called once per frame
