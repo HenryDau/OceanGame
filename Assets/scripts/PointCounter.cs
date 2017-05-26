@@ -17,4 +17,5 @@ public class PointCounter : MonoBehaviour {
     {
         pointText.text = "Points: " + point.ToString();
     }
+
 }
