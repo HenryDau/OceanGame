@@ -38,8 +38,8 @@ public class GarbageFloatPoof : MonoBehaviour {
         //This plays a sound from another game objects audio source using another script. 
         //You need to do this if your object is being destroyed or else the sound won't play, even if you have it before the destroy.
         //If it's not being destroyed you can use the objects own audio source and files e.g.
-        // source = GetComponent<AudioSource>();
-        // source.PlayOneShot(WaterDrop, 1f);
+        //AudioSource source = GetComponent<AudioSource>();
+        //source.PlayOneShot(WaterDrop, 1f);
 
         
 
@@ -47,6 +47,8 @@ public class GarbageFloatPoof : MonoBehaviour {
         GameObject PointCounter = GameObject.Find("Points");
         PointCounter Points = PointCounter.GetComponent<PointCounter>();
         Points.point += 1;
+
+		Destroy (gameObject);
        
 	}
 
