@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Playdropscript : MonoBehaviour {
     public AudioClip WaterDrop;
-    public AudioSource source;
+    private AudioSource source;
 
     // Use this for initialization
     void Start () {

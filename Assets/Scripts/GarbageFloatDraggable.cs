@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GarbageFloatDraggable : MonoBehaviour {
 
-	public int X_BOUND = 150;
+	public int X_BOUND = 175;
 	public int Y_BOUND = 75;
 	public float MAX_SPEED = 1.5f;
 
-	private Rigidbody rb;
+	private Rigidbody2D rb;
 	private bool pressed = false;
 	private bool released = false;
 	private Vector3 screenPoint;
@@ -19,7 +19,7 @@ public class GarbageFloatDraggable : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		int speed = Random.Range (5, 10);
-		rb = GetComponent<Rigidbody> ();
+		rb = GetComponent<Rigidbody2D> ();
 		rb.velocity = new Vector3 ((float)speed / 10, 0, 0);
 		//rb.velocity = new Vector3 (15 / 10, 0, 0);
 	}
@@ -60,19 +60,27 @@ public class GarbageFloatDraggable : MonoBehaviour {
 		if (!pressed && !released) {
 
 			// Rotate the trash
-			transform.Rotate (Vector3.up * Time.deltaTime * 5);
+			transform.Rotate (Vector3.back * Time.deltaTime * Random.Range(3,10));
 
 			stayInBounds ();
 
 			// Move the object
-			transform.position = transform.position + rb.velocity;
+			transform.position = new Vector3 (
+				transform.position.x + rb.velocity.x,
+				transform.position.y + rb.velocity.y,
+				transform.position.z
+			);
 		}
 
 		if (released) {
 
 			stayInBounds ();
 			
-			transform.position = transform.position + rb.velocity;
+			transform.position = new Vector3 (
+				transform.position.x + rb.velocity.x,
+				transform.position.y + rb.velocity.y,
+				transform.position.z
+			);
 			
 		}
 	}
@@ -81,15 +89,14 @@ public class GarbageFloatDraggable : MonoBehaviour {
 		
 		// Turn around if at the end of the map
 		if ((rb.velocity.x > 0 && transform.position.x > X_BOUND) || (rb.velocity.x < 0 && transform.position.x < -X_BOUND))
-			rb.velocity = new Vector3 (rb.velocity.x * -1, rb.velocity.y, 0);
+			rb.velocity = new Vector2 (rb.velocity.x * -1, rb.velocity.y);
 
 		// Keep in the y bounds
 		if ((transform.position.y > Y_BOUND && rb.velocity.y > 0) || (transform.position.y < -Y_BOUND && rb.velocity.y < 0))
-			rb.velocity = new Vector3 (rb.velocity.x, rb.velocity.y * -1, 0);
+			rb.velocity = new Vector2 (rb.velocity.x, rb.velocity.y * -1);
 
 		// Make sure it stays in the same plane
-		if (rb.velocity.z != 0 || transform.position.z != 0) {
-			rb.velocity = new Vector3 (rb.velocity.x, rb.velocity.y, 0);
+		if (transform.position.z != 0) {
 			transform.position = new Vector3 (transform.position.x, transform.position.y, 0);
 		}
 	}
