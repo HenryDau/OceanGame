@@ -32,9 +32,9 @@ public class GarbageFloatPoof : MonoBehaviour {
 
 	void OnMouseDown(){
 
-        /*GameObject Dropplay = GameObject.Find("Playdrop");//will need updated if proper sound controls are implemented
+        GameObject Dropplay = GameObject.Find("Playdrop");//will need updated if proper sound controls are implemented
         Playdropscript drop = Dropplay.GetComponent<Playdropscript>();
-        drop.play();*/
+        drop.play();
 
         Destroy(gameObject);
 
