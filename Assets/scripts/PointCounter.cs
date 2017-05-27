@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PointCounter : MonoBehaviour {
 
-    //This holds the points. There might be a better way to do this.
+    //This holds the points. 
     public int point = 0;
     public Text pointText;
     void Start(){

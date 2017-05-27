@@ -32,13 +32,18 @@ public class GarbageFloatPoof : MonoBehaviour {
 
 	void OnMouseDown(){
 
-        GameObject Dropplay = GameObject.Find("Playdrop");//will need updated if proper sound controls are implemented
+        GameObject Dropplay = GameObject.Find("Playdrop");
         Playdropscript drop = Dropplay.GetComponent<Playdropscript>();
         drop.play();
+        //This plays a sound from another game objects audio source using another script. 
+        //You need to do this if your object is being destroyed or else the sound won't play, even if you have it before the destroy.
+        //If it's not being destroyed you can use the objects own audio source and files e.g.
+        // source = GetComponent<AudioSource>();
+        // source.PlayOneShot(WaterDrop, 1f);
 
-        Destroy(gameObject);
+        
 
-        //Finds Points and references public variable
+        //Finds Points and increments public variable
         GameObject PointCounter = GameObject.Find("Points");
         PointCounter Points = PointCounter.GetComponent<PointCounter>();
         Points.point += 1;
