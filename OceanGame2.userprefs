@@ -1,0 +1,19 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UtilityScripts/SpecialFishSpawner.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Swim.cs" Line="41" Column="48" />
+      <File FileName="Assets/Scripts/QuestionBubble.cs" Line="23" Column="19" />
+      <File FileName="Assets/Scripts/GarbageFloatPoof.cs" Line="95" Column="4" />
+      <File FileName="Assets/Scripts/GarbageFloatDraggable.cs" Line="97" Column="4" />
+      <File FileName="Assets/Scripts/Float.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UtilityScripts/spawnControler.cs" Line="31" Column="7" />
+      <File FileName="Assets/Scripts/UtilityScripts/SpawnQuestions.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UtilityScripts/SpecialFishSpawner.cs" Line="31" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

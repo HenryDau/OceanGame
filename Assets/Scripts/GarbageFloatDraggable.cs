@@ -26,62 +26,74 @@ public class GarbageFloatDraggable : MonoBehaviour {
 
 	void OnMouseDown(){
 
-		pressed = true;
+		if (!GlobalVariables.isPaused) {
 
-		screenPoint = Camera.main.WorldToScreenPoint (gameObject.transform.position);
+			pressed = true;
 
-		offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+			screenPoint = Camera.main.WorldToScreenPoint (gameObject.transform.position);
+
+			offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+	
+		}
 	}
 
 	void OnMouseDrag(){
+		
+		if (!GlobalVariables.isPaused) {
 
-		oldPosition = transform.position;
+			oldPosition = transform.position;
 
-		Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+			Vector3 curScreenPoint = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 
-		Vector3 curPosition = Camera.main.ScreenToWorldPoint (curScreenPoint); //&#43; offset;
+			Vector3 curPosition = Camera.main.ScreenToWorldPoint (curScreenPoint); //&#43; offset;
 
-		transform.position = curPosition + offset;
+			transform.position = curPosition + offset;
+		}
 
 	}
 
 	void OnMouseUp(){
-		pressed = false;
-		released = true;
+		if (!GlobalVariables.isPaused) {
+			pressed = false;
+			released = true;
 
-		rb.velocity = (transform.position - oldPosition) * Time.deltaTime * 5;
+			rb.velocity = (transform.position - oldPosition) * Time.deltaTime * 5;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
+		if (!GlobalVariables.isPaused) {
 
-		limitSpeed ();
+			limitSpeed ();
 
-		if (!pressed && !released) {
+			if (!pressed && !released) {
 
-			// Rotate the trash
-			transform.Rotate (Vector3.back * Time.deltaTime * Random.Range(3,10));
+				// Rotate the trash
+				transform.Rotate (Vector3.back * Time.deltaTime * Random.Range (3, 10));
 
-			stayInBounds ();
+				stayInBounds ();
 
-			// Move the object
-			transform.position = new Vector3 (
-				transform.position.x + rb.velocity.x,
-				transform.position.y + rb.velocity.y,
-				transform.position.z
-			);
-		}
+				// Move the object
+				transform.position = new Vector3 (
+					transform.position.x + rb.velocity.x,
+					transform.position.y + rb.velocity.y,
+					transform.position.z
+				);
+			}
 
-		if (released) {
+			if (released) {
 
-			stayInBounds ();
+				stayInBounds ();
 			
-			transform.position = new Vector3 (
-				transform.position.x + rb.velocity.x,
-				transform.position.y + rb.velocity.y,
-				transform.position.z
-			);
+				transform.position = new Vector3 (
+					transform.position.x + rb.velocity.x,
+					transform.position.y + rb.velocity.y,
+					transform.position.z
+				);
 			
+			}
 		}
 	}
 

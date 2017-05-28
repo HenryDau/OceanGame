@@ -46,6 +46,7 @@ public class QuestionBubble : MonoBehaviour {
 
 
 	}
+
 	void OnGUI() {
 		if (showQuestion) {			
 			GUI.Window (0, new Rect (450, 130, 300, 200), DoWindow0, "Basic Window");
