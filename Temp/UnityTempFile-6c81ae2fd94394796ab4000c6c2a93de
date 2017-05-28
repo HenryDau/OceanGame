@@ -95,6 +95,7 @@
 'Assets/Scripts/Float.cs'
 'Assets/Scripts/GarbageFloatDraggable.cs'
 'Assets/Scripts/GarbageFloatPoof.cs'
+'Assets/Scripts/Interactable.cs'
 'Assets/Scripts/Playdropscript.cs'
 'Assets/Scripts/PointCounter.cs'
 'Assets/Scripts/QuestionBubble.cs'

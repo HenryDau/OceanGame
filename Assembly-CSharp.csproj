@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{84AFD85E-07A4-6851-2D84-15133553C787}</ProjectGuid>
+    <ProjectGuid>{1BC7FB52-8EA7-35D5-E145-2264F78BD025}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Float.cs" />
      <Compile Include="Assets\Scripts\GarbageFloatDraggable.cs" />
      <Compile Include="Assets\Scripts\GarbageFloatPoof.cs" />
+     <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\Playdropscript.cs" />
      <Compile Include="Assets\Scripts\PointCounter.cs" />
      <Compile Include="Assets\Scripts\QuestionBubble.cs" />
