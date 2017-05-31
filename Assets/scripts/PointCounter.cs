@@ -7,15 +7,16 @@ public class PointCounter : MonoBehaviour {
 
     //This holds the points. 
     public int point = 0;
+	public int trashMissed = 0;
     public Text pointText;
+
     void Start(){
-        point = 0;
-        pointText.text = "Points: " + point.ToString();
+		pointText.text = "Trash Missed: " + trashMissed.ToString () + "\nPoints: " + point.ToString();
     }
 
     private void Update()
     {
-        pointText.text = "Points: " + point.ToString();
+		pointText.text = "Trash Missed: " + trashMissed.ToString () + "\nPoints: " + point.ToString();
     }
 
 }

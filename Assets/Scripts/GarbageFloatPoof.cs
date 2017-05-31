@@ -9,6 +9,7 @@ public class GarbageFloatPoof : MonoBehaviour {
 	public int Y_BOUND = 75;
 	public float MAX_SPEED = 1.5f;
 
+	private int timeAlive = 0;
 	private Rigidbody2D rb;
  
 
@@ -60,6 +61,9 @@ public class GarbageFloatPoof : MonoBehaviour {
     void Update () {
        
 		if (!GlobalVariables.isPaused) {
+
+			// Used to make sure garbage becomes visible to the player before counting for score (not needed)
+			timeAlive++;
 			
 			// Rotate the trash
 			transform.Rotate (Vector3.back * Time.deltaTime * UnityEngine.Random.Range (3, 10));
@@ -68,9 +72,18 @@ public class GarbageFloatPoof : MonoBehaviour {
 			Vector3 pos = transform.position;
 
 			// Turn around if at the end of the map
-			if ((rb.velocity.x > 0 && pos.x > X_BOUND) || (rb.velocity.x < 0 && pos.x < -X_BOUND))
+			if ((rb.velocity.x > 0 && pos.x > X_BOUND) || (rb.velocity.x < 0 && pos.x < -X_BOUND)) {
+
+				if (timeAlive > 60) {
+					//Finds Points and increments public variable
+					GameObject PointCounter = GameObject.Find ("Points");
+					PointCounter Points = PointCounter.GetComponent<PointCounter> ();
+					Points.trashMissed += 1;
+				}
+
 				Destroy (gameObject);
-			//rb.velocity = new Vector3( rb.velocity.x * -1, rb.velocity.y, rb.velocity.z);
+				//rb.velocity = new Vector3( rb.velocity.x * -1, rb.velocity.y, rb.velocity.z);
+			}
 		
 
 			// Keep in the y bounds
