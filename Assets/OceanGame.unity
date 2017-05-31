@@ -172,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 51379072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.6, y: 0.4, z: 50}
-  m_LocalScale: {x: 37.14936, y: 20.031183, z: 1}
+  m_LocalScale: {x: 37.14936, y: 20.031183, z: 1.01}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -446,8 +446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 0
-  pointText: {fileID: 905153399}
   trashMissed: 0
+  pointText: {fileID: 905153399}
 --- !u!4 &1122194423
 Transform:
   m_ObjectHideFlags: 0
