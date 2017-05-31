@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MIN_X: -10
-  MIN_Y: -5
+  MIN_Y: -6
   MAX_X: 10
   MAX_Y: 5
   MIN_SPEED: 1

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/OceanGame.unity
+- path: Assets/_Scenes/AquariumScene.unity
   isLoaded: 1
   isActive: 1
