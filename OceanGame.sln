@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceanGame", "Assembly-CSharp-firstpass.csproj", "{005D2745-FF8A-8D23-418A-DC58A9E0EE36}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceanGame", "Assembly-CSharp.csproj", "{1BC7FB52-8EA7-35D5-E145-2264F78BD025}"
 EndProject
 Global
@@ -11,10 +9,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{005D2745-FF8A-8D23-418A-DC58A9E0EE36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{005D2745-FF8A-8D23-418A-DC58A9E0EE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{005D2745-FF8A-8D23-418A-DC58A9E0EE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{005D2745-FF8A-8D23-418A-DC58A9E0EE36}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1BC7FB52-8EA7-35D5-E145-2264F78BD025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1BC7FB52-8EA7-35D5-E145-2264F78BD025}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BC7FB52-8EA7-35D5-E145-2264F78BD025}.Release|Any CPU.ActiveCfg = Release|Any CPU
