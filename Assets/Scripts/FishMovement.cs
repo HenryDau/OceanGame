@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Hi boys, just a harmless comment swimming thru a seamless 
+//git commit, hopefully :)
 public class FishMovement : MonoBehaviour {
 	public int MIN_X = -20;
 	public int MIN_Y = -20;
