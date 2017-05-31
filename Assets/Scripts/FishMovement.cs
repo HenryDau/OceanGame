@@ -4,12 +4,12 @@ using UnityEngine;
 //Hi boys, just a harmless comment swimming thru a seamless 
 //git commit, hopefully :)
 public class FishMovement : MonoBehaviour {
-	public int MIN_X = -20;
-	public int MIN_Y = -20;
-	public int MAX_X = 20;
-	public int MAX_Y = 20;
-	public int MIN_SPEED = 1;
-	public int MAX_SPEED = 2;
+	public int MIN_X = -10;
+	public int MIN_Y = -6;
+	public int MAX_X = 11;
+	public int MAX_Y = 5;
+	public float MIN_SPEED = 1;
+	public float MAX_SPEED = 2;
 	private Rigidbody2D rb2d;
 	private Vector2 goalPoint;
 	// Use this for initialization
@@ -33,9 +33,22 @@ public class FishMovement : MonoBehaviour {
 		rb2d.velocity = (goalPoint - rb2d.position).normalized * Random.Range (MIN_SPEED, MAX_SPEED);
 		Vector2 dir = rb2d.velocity;
 		float angle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
-		if (angle > 90 && angle < 270) {
-			transform.localScale = new Vector3 (1, -1, 1);
+		Vector3 copyscale = transform.localScale;
+		if (rb2d.velocity.magnitude > (MAX_SPEED + MIN_SPEED) / 2.0) {
+			transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+			copyscale = transform.localScale;
+			copyscale.y = Mathf.Abs (copyscale.y);
+			copyscale.x = Mathf.Abs (copyscale.x);
+			if (angle < -90 || angle > 90)
+				copyscale.y *= -1;
+			transform.localScale = copyscale;
+		} else {
+			transform.rotation = Quaternion.AngleAxis (0, Vector3.forward);
+			copyscale.x = Mathf.Abs (copyscale.x);
+			copyscale.y = Mathf.Abs (copyscale.y);
+			if (angle < -90 || angle > 90)
+				copyscale.x *= -1;
+			transform.localScale = copyscale;
 		}
 
 
