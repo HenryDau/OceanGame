@@ -44,6 +44,7 @@ public class Swim : MonoBehaviour {
             Playsparklescript sparkle = sparkleplay.GetComponent<Playsparklescript>();
             sparkle.play();
             Debug.Log ("Add to aquarium");
+
 			Destroy (gameObject);
 		}
 	}
