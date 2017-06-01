@@ -10,11 +10,14 @@ public class QuestionBubble : MonoBehaviour {
 	float amplitude = 20.0f;
 	float phase_angle;
 
+
 	// Use this for initialization
 	void Start () {
 		speed = Random.Range (-0.5f, -1.0f);
 		initialY = transform.localPosition.y;
 		phase_angle = Random.Range (0.0f, 360.0f);
+
+
 	}
 
 	// Update is called once per frame
@@ -49,7 +52,7 @@ public class QuestionBubble : MonoBehaviour {
 
 	void OnGUI() {
 		if (showQuestion) {			
-			GUI.Window (0, new Rect (450, 130, 300, 200), DoWindow0, "Basic Window");
+			GUI.Window (0, new Rect (275, 130, 300, 200), DoWindow0, "Basic Window");
 		}
 	}
 
