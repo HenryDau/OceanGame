@@ -63,6 +63,8 @@
      <Compile Include="Assets\Scripts\UtilityScripts\SpecialFishSpawner.cs" />
      <Compile Include="Assets\Scripts\UtilityScripts\spawnController.cs" />
      <Compile Include="Assets\Scripts\WaveController.cs" />
+     <Compile Include="Assets\Scripts\loadQuestions.cs" />
+     <None Include="Assets\Resources\questions.txt" />
      <None Include="Assets\Prefabs\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\nnj3de_crucarp\README.txt" />
  <Reference Include="UnityEngine.Analytics">

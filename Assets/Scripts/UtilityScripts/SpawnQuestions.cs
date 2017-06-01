@@ -9,10 +9,14 @@ public class SpawnQuestions : MonoBehaviour {
 	public float minY;
 	public float spawnChance;
 	int counter = 0;
+	public TextAsset textFile;
+	public string[] textLines;
 
 	// Use this for initialization
 	void Start () {
-		
+		if (textFile != null) {
+			textLines = (textFile.text.Split ('\n'));
+		}
 	}
 	
 	// Update is called once per frame
