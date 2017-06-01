@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 17e89943e76375c4e81186476c15126b
+timeCreated: 1496335632
+=======
 guid: f02d3de3c4df542e7a1b1f83713d4619
 timeCreated: 1496335173
+>>>>>>> d73c3a78727a2474a6b8ae8940bf1c28a76e4218
 licenseType: Free
 MonoImporter:
   serializedVersion: 2

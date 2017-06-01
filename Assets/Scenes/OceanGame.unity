@@ -786,10 +786,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1534029069}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 17e89943e76375c4e81186476c15126b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkle: {fileID: 8300000, guid: 28f9e8d4df699964d968f0eff898681d, type: 3}
+=======
   m_Script: {fileID: 11500000, guid: f02d3de3c4df542e7a1b1f83713d4619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sparkle: {fileID: 8300000, guid: c3909655f622c4884883bb00db502f9e, type: 3}
+>>>>>>> d73c3a78727a2474a6b8ae8940bf1c28a76e4218
 --- !u!4 &1534029072
 Transform:
   m_ObjectHideFlags: 0
