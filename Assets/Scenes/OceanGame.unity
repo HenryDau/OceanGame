@@ -762,8 +762,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1534029072}
-  - component: {fileID: 1534029071}
   - component: {fileID: 1534029070}
+  - component: {fileID: 1534029071}
   m_Layer: 0
   m_Name: Playsparkle
   m_TagString: Untagged
@@ -859,10 +859,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1534029069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e202b3549c262a441ad239652305ef70, type: 3}
+  m_Script: {fileID: 11500000, guid: 17e89943e76375c4e81186476c15126b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sparkle: {fileID: 8300000, guid: 7885f0fdf23ce7b448f274c23cc5f270, type: 3}
+  sparkle: {fileID: 8300000, guid: 28f9e8d4df699964d968f0eff898681d, type: 3}
 --- !u!4 &1534029072
 Transform:
   m_ObjectHideFlags: 0
