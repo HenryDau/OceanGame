@@ -88,10 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GlobalVariables.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="Assets\Playsparklescript.cs" />
->>>>>>> origin/master
     <Compile Include="Assets\Prefabs\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
     <Compile Include="Assets\Prefabs\Plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
     <Compile Include="Assets\Prefabs\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
@@ -108,9 +105,11 @@
     <Compile Include="Assets\Scripts\UtilityScripts\SpecialFishSpawner.cs" />
     <Compile Include="Assets\Scripts\UtilityScripts\spawnController.cs" />
     <Compile Include="Assets\Scripts\WaveController.cs" />
+    <Compile Include="Assets\Scripts\loadQuestions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Prefabs\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+    <None Include="Assets\Resources\questions.txt" />
     <None Include="Assets\nnj3de_crucarp\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
